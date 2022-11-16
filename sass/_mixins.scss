@@ -1,0 +1,61 @@
+@mixin modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $Black-modal;
+}
+
+@mixin image-btn($left, $right, $showDesktop) {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: $left;
+  right: $right;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: $White;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (min-width: 1115px) {
+    @if ($showDesktop == true) {
+      display: block;
+    } @else {
+      display: none;
+    }
+  }
+}
+
+@mixin changenumber($pv, $ph) {
+  width: 25px;
+  height: 100%;
+  /*display: grid;
+  place-content: center;*/
+  padding: $pv $ph;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin button {
+  width: 100%;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9em;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  color: $White;
+  background-color: $Orange;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

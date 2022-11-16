@@ -1,0 +1,29 @@
+.modal-navbar {
+ /* display: none;*/
+  display: block;
+  width: 250px;
+  height: 100%;
+  padding: 28px 24px;
+  background-color: $White;
+  &__background {
+    @include modal-background;
+   /* display: block;*/
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-top: 50px;
+    list-style: none;
+  }
+  &__link {
+      color: $Very-dark-blue;
+      font-size: 1.1em;
+      font-weight: 700;
+      text-decoration: none;
+  }
+  &__close-icon:hover {
+    cursor: pointer;
+  }
+}

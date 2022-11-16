@@ -1,0 +1,49 @@
+.modal-gallery {
+  position: relative;
+  width: 550px;
+  &__background {
+    @include modal-background;
+    /*display: grid;*/
+    place-content: center;
+  }
+  &__close-container {
+    height: 30px;
+    text-align: right;
+  }
+  &__close {
+    width: 16px;
+    &:hover {
+      content: url("../images/icon-close-orange.svg");
+      cursor: pointer;
+    }
+  }
+  &__image-container {
+    position: relative;
+    height: 446px;
+    margin-bottom: 32px;
+    background-image: url("../images/image-product-1.jpg");
+    background-size: cover;
+    border-radius: 16px;
+  }
+  &__previous {
+    @include image-btn(-15px, none, true);
+
+  }
+  &__next {
+    @include image-btn(none, -15px, true);
+  }
+  &__thunmails {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__thunmail {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $Orange;
+    }
+  }
+
+}

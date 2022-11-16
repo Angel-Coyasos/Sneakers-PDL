@@ -1,0 +1,60 @@
+.cart-modal {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 8px;
+  width: 360px;
+  height: 260px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px;
+  background-color: $White;
+  &__title {
+    padding: 24px;
+    font-weight: 700;
+    border-bottom: 1px solid $Grayish-blue;
+  }
+  &__checkout-container {
+    padding: 24px;
+  }
+  &__details-container {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
+    color: $Dark-grayish-blue;
+  }
+  &__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  &__product {
+
+  }
+  &__price {
+    span {
+      color: $Black;
+      font-weight: 700;
+    }
+  }
+  &__delete:hover {
+    cursor: pointer;
+  }
+  &__checkout {
+    @include button;
+  }
+}
+
+//display block modal cart
+.show {
+  display: block;
+}
+
+//clase para cuando esta vacio el cart
+.cart-empty {
+  margin-top: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: $Black-modal;
+
+}

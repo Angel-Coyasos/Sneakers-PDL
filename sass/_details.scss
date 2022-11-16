@@ -1,0 +1,74 @@
+.details {
+  padding: 24px;
+  &__company {
+    margin-bottom: 12px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $Orange;
+  }
+  &__title {
+    margin-bottom: 16px;
+    font-size: 1.7em;
+  }
+  &__description {
+    margin-bottom: 24px;
+    font-size: 0.94em;
+    line-height: 24px;
+    text-align: justify;
+    color: $Dark-grayish-blue;
+  }
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__now {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+  &__discount {
+    padding: 4px;
+    font-size: 0.5em;
+    color: $Orange;
+    border-radius: 4px;
+    background-color: $Pale-orange;
+  }
+  &__before {
+    font-size: 700;
+    text-decoration: line-through;
+    color: $Dark-grayish-blue;
+  }
+  &__product-quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__button {
+    @include button;
+  }
+  @media (min-width: 1115px) {
+    width: 446px;
+    padding-top: 60px;
+    &__title  {
+      font-size: 2.7em;
+      margin-bottom: 48px;
+    }
+    &__description {
+      font-size: 0.9em;
+      margin-bottom: 37px;
+    }
+    &__prices {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__product-quantity {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.input {
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: $Light-grayish-blue;
+  &__minus {
+    @include changenumber(24px, 5px);
+  }
+  &__number {
+    width: 100%;
+    font-family: $font;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: $Light-grayish-blue;
+  }
+  &__plus {
+    @include changenumber(19px, 3px);
+  }
+}

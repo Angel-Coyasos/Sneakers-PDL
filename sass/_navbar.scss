@@ -1,0 +1,22 @@
+.navbar {
+  display: none;
+  width: 400px;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  &__link {
+    display: block;
+    height: 112px;
+    padding-top: 42px;
+    text-decoration: none;
+    color: $Dark-grayish-blue;
+    &:hover {
+      border-bottom: 4px solid $Orange;
+    }
+  }
+  @media(min-width: 1115px) {
+  display: block;
+  }
+}

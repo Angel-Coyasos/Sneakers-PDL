@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 16px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!--contenedor principal -->
+  <main class="main-container">
+    <!--contenedor header-->
+    <header class="header">
+      <!--contenedor logo y icono del menu-->
+      <div class="header__navegation">
+        <img class="header__menu" src="./images/icon-menu.svg" alt="icon menu">
+        <img class="header__logo" src="./images/logo.svg" alt="logo">
+
+        <!--navbar menu-->
+        <nav class="navbar">
+          <ul class="navbar__items">
+            <li>
+              <a class="navbar__link" href="#">Collections</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#">Men</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#">Women</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#">About</a>
+            </li>
+            <li>
+              <a class="navbar__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <!--modal navbar menu-->
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar">
+          <img class="modal-navbar__close-icon" src="./images/icon-close.svg" alt="">
+          <ul class="modal-navbar__items">
+            <li>
+              <a class="modal-navbar__link" href="#">Collections</a></li>
+            <li>
+              <a class="modal-navbar__link" href="#">Men</a></li>
+            <li>
+              <a class="modal-navbar__link" href="#">Women</a></li>
+            <li>
+              <a class="modal-navbar__link" href="#">About</a></li>
+            <li>
+              <a class="modal-navbar__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!--contenedor icon cart y avatar-->
+      <div class="header__cart-avatar">
+        <!--bloque cart-->
+        <div class="header__cart">
+          <div class="header__cart--notification">0</div>
+          <img src="./images/icon-cart.svg" alt="cart">
+        </div>
+        <!--bloque avatar-->
+        <img class="header__avatar" src="./images/image-avatar.png" alt="avatar">
+      </div>
+
+    </header>
+
+    <!--section contenido de la pld-->
+    <section class="content">
+      <!--contenedor galeria-->
+      <article class="gallery">
+        <!--contenedor de flechas e imagen principal-->
+        <div class="gallery__image-container">
+          <img class="gallery__previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="gallery__next" src="./images/icon-next.svg" alt="next">
+        </div>
+        <!--contenedor imagenes extras-->
+        <div class="gallery__thunmails">
+          <img id="1" class="gallery__thunmail" src="./images/image-product-1-thumbnail.jpg" alt="gallery__thunmail">
+          <img id="2" class="gallery__thunmail" src="./images/image-product-2-thumbnail.jpg" alt="gallery__thunmail">
+          <img id="3" class="gallery__thunmail" src="./images/image-product-3-thumbnail.jpg" alt="gallery__thunmail">
+          <img id="4" class="gallery__thunmail" src="./images/image-product-4-thumbnail.jpg" alt="gallery__thunmail">
+        </div>
+      </article>
+
+      <!--contenedor detalles del productos-->
+      <article class="details">
+        <!--nombre compañia-->
+        <h2 class="details__company">Sneaker Company</h2>
+        <!--nombre producto-->
+        <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+        <!--descripcion producto-->
+        <p class="details__description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <!--detalle de los precios del producto-->
+        <div class="details__prices">
+          <p class="details__now">$125.00 <span class="details__discount">50%</span></p>
+          <p class="details__before">$250.00</p>
+        </div>
+        <!--detalles de cantidad de productos-->
+        <div class="details__product-quantity">
+          <!--input para cantidad de productos con flechas-->
+          <div class="input">
+            <img class="input__minus" src="./images/icon-minus.svg" alt="minus">
+            <input class="input__number" type="number" value="0">
+            <img class="input__plus" src="./images/icon-plus.svg" alt="plus">
+          </div>
+          <!--boton para agregar al carrito-->
+          <button class="details__button">
+            <img src="./images/icon-cart-white.svg" alt="cart">
+            Add to cart
+          </button>
+        </div>
+      </article>
+
+    </section>
+
+    <!--modal cart-->
+    <div class="cart-modal">
+      <!--title modal cart-->
+      <p class="cart-modal__title">Cart</p>
+      <!--contenido modal cart-->
+      <div class="cart-modal__checkout-container">
+        <!--detalles del articulo modal cart-->
+        <div class="cart-modal__details-container">
+          <!--imagen articulo-->
+          <img class="cart-modal__image" src="./images/image-product-1-thumbnail.jpg" alt="thumbnail">
+          <!--descripcion articulo-->
+          <div>
+            <p class="cart-modal__product">Autumn Limited Edition...</p>
+            <p class="cart-modal__price">$125.000 x 3 <span>$375.00</span></p>
+          </div>
+          <!--icono para borrar articulo-->
+          <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="delete">
+        </div>
+        <!--procesar pago-->
+          <button class="cart-modal__checkout">Checkout</button>
+      </div>
+    </div>
+
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://co.linkedin.com/in/angel-eduardo-coyasos-tobar-2539a624b" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Angel Coyasos</a>.
+  </footer>
+
+  <!--modal gallery-->
+  <div class="modal-gallery__background">
+    <!--contenedor galeria-->
+    <article class="modal-gallery">
+      <!--imagen cerrar modal-->
+      <div class="modal-gallery__close-container">
+        <img class="modal-gallery__close" src="./images/icon-close-white.svg" alt="close">
+      </div>
+      <!--contenedor de flechas e imagen principal-->
+      <div class="modal-gallery__image-container">
+        <img class="modal-gallery__previous" src="./images/icon-previous.svg" alt="previous">
+        <img class="modal-gallery__next" src="./images/icon-next.svg" alt="next">
+      </div>
+      <!--contenedor imagenes extras-->
+      <div class="modal-gallery__thunmails">
+        <img id="m1" class="modal-gallery__thunmail" src="./images/image-product-1-thumbnail.jpg" alt="gallery__thunmail">
+        <img id="m2" class="modal-gallery__thunmail" src="./images/image-product-2-thumbnail.jpg" alt="gallery__thunmail">
+        <img id="m3" class="modal-gallery__thunmail" src="./images/image-product-3-thumbnail.jpg" alt="gallery__thunmail">
+        <img id="m4" class="modal-gallery__thunmail" src="./images/image-product-4-thumbnail.jpg" alt="gallery__thunmail">
+      </div>
+    </article>
+  </div>
+
+  <script src="./js/main.js" ></script>
+
+</body>
+</html>

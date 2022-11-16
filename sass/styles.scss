@@ -1,0 +1,30 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_initial.scss";
+@import "_header.scss";
+@import "_navbar.scss";
+@import "_modal-navbar.scss";
+@import "_gallery.scss";
+@import "_details.scss";
+@import "_input.scss";
+@import "_modal-cart.scss";
+@import "_modal-gallery.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+.main-container {
+  position: relative;
+  width: 375px;
+  margin: auto;
+  @media (min-width: 1115px) {
+    width: 1115px;
+  }
+}
+
+.content {
+  @media (min-width: 1115px) {
+    display: flex;
+    gap: 124px;
+    padding: 90px 50px;
+  }
+}
